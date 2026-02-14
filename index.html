@@ -51,7 +51,7 @@
     .social-icons {
         display: flex;
         justify-content: space-between;
-        width: 120px;
+        width: 160px; /* Increased width to accommodate the 4th icon */
     }
 
     .social-icons a {
@@ -109,7 +109,12 @@
         border-radius: 12px;
         margin-top: 30px;
         border-left: 5px solid #1F5B3A;
-        cursor: pointer; /* Added to show it's clickable */
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .content-box:hover {
+        border-left: 5px solid #D8A44C;
     }
 
     h3 {
@@ -157,6 +162,8 @@
         .social-icons {
             justify-content: center;
             width: 100%;
+            margin-top: 15px;
+            gap: 20px; /* Better spacing for mobile */
         }
     }
 </style>
@@ -170,74 +177,73 @@
         <a href="#home">Home</a>
         <a href="#about">Blog</a>
         <a href="#zenith">Povestea Noastră</a>
+        <a href="#author">Autor</a>
     </nav>
     <div class="social-icons">
         <a href="https://www.instagram.com/esenta_zilei_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="fab fa-instagram"></a>
         <a href="https://www.facebook.com/share/1B1h1QmCBH/?mibextid=wwXIfr" target="_blank" class="fab fa-facebook-f"></a>
         <a href="https://www.tiktok.com/@podcast.arad?is_from_webapp=1&sender_device=pc" target="_blank" class="fab fa-tiktok"></a>
+        <a href="https://youtube.com/@esentazilei?si=6JtpF0BQoWpJr1zS" target="_blank" class="fab fa-youtube"></a>
     </div>
 </header>
 
 <section class="hero" id="home">
     <h2>Bun venit la Esența zilei</h2>
     <p>Sursa ta zilnică de inspirație, claritate și conversații semnificative. Descoperă esența din spatele fiecărei povești.</p>
-    <a href="#about" class="button">Explore More</a>
+    <a href="#author" class="button">Descoperă Autorul</a>
 </section>
 
 <section id="about">
     <div class="content-box">
         <h3><a href="blog.html" style="color: #E8DCC6; text-decoration: none;">Blog Esența zilei</a></h3>
-        <p>Citește cele mai noi articole și gânduri despre dezvoltare și echilibru.</p>
+        <p>Explorează articole despre echilibru, carieră și dezvoltare personală.</p>
     </div>
 </section>
 
 <section id="zenith">
-    <div class="content-box" onclick="toggleContent()">
+    <div class="content-box" onclick="toggleContent('expandableContent')">
         <h3>Povestea Esența zilei</h3>
         <div class="expandable-content" id="expandableContent">
-            <p>„Esența Zilei” este mai mult decât un podcast – este o invitație la o viață trăită conștient, cu sens, echilibru și direcție clară...</p>
-            </div>
+            <p>„Esența Zilei” este mai mult decât un podcast – este o invitație la o viață trăită conștient, cu sens, echilibru și direcție clară. S-a născut din dorința de a aduce mai multă claritate și inspirație într-o lume în care ritmul alert îi face pe mulți tineri să se simtă pierduți între alegeri, oportunități și presiuni sociale.</p>
+            <p>Podcastul este dedicat în special tinerilor care își caută drumul profesional și personal, oferindu-le sprijin, modele reale și instrumente practice pentru a-și descoperi potențialul și pentru a construi o carieră care li se potrivește cu adevărat. „Esența Zilei” devine un spațiu în care întrebările despre viitor, pasiuni și alegeri profesionale își găsesc răspunsuri prin conversații sincere și inspiraționale.</p>
+            <p>În fiecare episod aducem în fața publicului personalități din domenii diverse – profesioniști, antreprenori, creatori, specialiști și oameni care au reușit să își transforme pasiunea într-o carieră. Prin poveștile lor autentice, experiențele trăite și sfaturile practice, ascultătorii descoperă perspective diferite asupra succesului și înțeleg că fiecare parcurs profesional este unic.</p>
+            <p>„Esența Zilei” nu se limitează doar la orientarea în carieră, ci promovează și importanța unui stil de viață sănătos și echilibrat. Credem că performanța și succesul apar atunci când există armonie între dezvoltarea profesională, starea emoțională, energia zilnică și relațiile personale. De aceea, podcastul abordează teme precum dezvoltarea personală, gestionarea stresului, obiceiurile sănătoase, motivația, disciplina, echilibrul emoțional și reconectarea cu sine.</p>
+            <p>Fiecare episod reprezintă o pauză de respiro într-o lume grăbită – un moment de reflecție, inspirație și învățare. Este locul unde ideile simple pot produce schimbări reale, iar poveștile oamenilor pot deveni surse de motivație pentru cei care își doresc să își construiască o viață autentică, aliniată cu valorile și visurile lor.</p>
+            <p>„Esența Zilei” își propune să creeze o comunitate de tineri și profesioniști care își doresc să evolueze, să își găsească direcția și să trăiască echilibrat. Fie că este ascultat dimineața, ca inspirație pentru un nou început, sau seara, ca moment de reflecție, podcastul oferă claritate, motivație și sprijin pentru construirea unui viitor care te reprezintă cu adevărat.</p>
+        </div>
     </div>
 </section>
 
 <section id="author">
-    <div class="content-box" onclick="toggleAuthor()">
+    <div class="content-box" onclick="toggleContent('contentAuthor')">
         <h3>Cine e in spatele Esența zilei</h3>
         <div class="expandable-content" id="contentAuthor">
             <p><i>„Nu timpul trece peste noi, ci noi trecem prin timp, lăsând urme acolo unde am iubit.” – Octavian Paler</i></p>
-            
             <p>Mă numesc Olga Preda, am 17 ani și sunt elevă în Arad. Sunt o persoană care crede în puterea autenticității și în frumusețea lucrurilor simple, acele detalii discrete care dau sens fiecărei zile. Îmi place să observ oamenii, să ascult povești, să surprind emoții și să transform gândurile în cuvinte care pot atinge suflete.</p>
-            
             <p>Sportul a devenit pentru mine mai mult decât o activitate fizică – a fost spațiul în care am învățat disciplina, echilibrul și puterea de a merge mai departe chiar și atunci când drumul pare dificil. Mi-a oferit stabilitate emoțională și m-a învățat că performanța nu înseamnă doar rezultate, ci și proces, răbdare și încredere în sine.</p>
-            
             <p>În paralel, pasiunea pentru scris și comunicare mi-a deschis o lume nouă, o lume în care am descoperit cât de mult pot cuvintele să inspire, să aline și să creeze conexiuni reale între oameni. Am realizat că vocea fiecăruia dintre noi are valoare atunci când este exprimată sincer și cu sens.</p>
-            
             <p>Din dorința de a crea un spațiu în care ideile, emoțiile și experiențele să poată fi împărtășite liber, s-a născut podcastul „Esența Zilei”.</p>
-            
             <p>Povestea acestui proiect a început dintr-o întrebare simplă, dar profundă: „Ce rămâne cu adevărat important la finalul unei zile?” Într-o lume în care ritmul alert, presiunile sociale și multitudinea de alegeri îi fac pe mulți tineri să se simtă confuzi sau pierduți, am simțit nevoia unui loc în care oamenii să poată face o pauză, să respire și să se reconecteze cu ei înșiși.</p>
-            
             <p>Ideea podcastului a apărut din dorința de a aduce mai multă claritate, inspirație și echilibru în viețile celor care se află în căutarea propriului drum. Am vrut să creez un spațiu autentic, în care conversațiile să fie sincere, calde și relevante pentru realitatea tinerilor de astăzi.</p>
-            
             <p>„Esența Zilei” este mai mult decât un podcast – este o invitație la o viață trăită conștient, cu sens și direcție. Fiecare episod reprezintă o întâlnire cu oameni care au avut curajul să își urmeze pasiunea și să își construiască propriul parcurs profesional și personal. Prin poveștile lor reale, experiențele trăite și lecțiile învățate, ascultătorii descoperă că succesul nu are o singură definiție și că fiecare drum este unic.</p>
-            
             <p>Podcastul este dedicat în special tinerilor care își caută direcția în viață și în carieră, oferindu-le modele autentice, perspective diferite și instrumente practice care îi pot ajuta să își descopere potențialul. Conversațiile aduc în prim-plan profesioniști, antreprenori, creatori și oameni care au transformat pasiunea într-o vocație, demonstrând că visurile pot deveni realitate atunci când sunt susținute de muncă, perseverență și încredere.</p>
-            
             <p>În același timp, „Esența Zilei” promovează ideea că succesul nu poate exista fără echilibru interior. Podcastul abordează teme precum dezvoltarea personală, gestionarea emoțiilor, motivația, disciplina, obiceiurile sănătoase și importanța relației cu sinele. Cred cu tărie că performanța adevărată apare atunci când există armonie între minte, suflet și stil de viață.</p>
-            
             <p>Fiecare episod este gândit ca o pauză de liniște într-o lume grăbită – un moment de reflecție și inspirație. Este locul unde ideile simple pot genera schimbări profunde, iar poveștile oamenilor pot deveni puncte de sprijin pentru cei care își caută curajul de a începe.</p>
-            
-            <p>Pentru mine, „Esența Zilei” reprezintă mai mult decât un proiect – este o misiune personală. Este dorința de a crea una comunitate de oameni care își doresc să evolueze, să trăiască autentic și să își construiască un viitor aliniat cu valorile lor.</p>
-            
+            <p>Pentru mine, „Esența Zilei” reprezintă mai mult decât un proiect – este o misiune personală. Este dorința de a crea o comunitate de oameni care își doresc să evolueze, să trăiască autentic și să își construiască un viitor aliniat cu valorile lor.</p>
             <p>Cred că adevărata eleganță nu se regăsește în aparențe, ci în sinceritatea cu care alegem să trăim, în liniștea pe care o purtăm în priviri și în modul în care suntem prezenți în fiecare clipă. Iar dacă, prin acest podcast, reușesc să ofer inspirație măcar unui singur om, atunci știu că „Esența Zilei” și-a îndeplinit scopul.</p>
         </div>
     </div>
 </section>
 
-<section id="zenith-info">
-    <div class="content-box" onclick="toggleContentZenith()">
+<section id="zenith-ark">
+    <div class="content-box" onclick="toggleContent('expandableContentZenith')">
         <h3>Despre Zenith Ark</h3>
         <div class="expandable-content" id="expandableContentZenith">
-            <p>Zenith Ark este o companie fondată în Timișoara, construită ca o platformă pentru dezvoltare...</p>
+            <p>Zenith Ark este o companie fondată în Timișoara, construită ca o platformă pentru dezvoltare — atât pentru afaceri locale, cât și pentru tinerii care își doresc să își construiască o carieră în zona creativă și digitală.</p>
+            <p>Zenith Ark nu este doar un brand de haine sau o agenție de marketing. Este un grup format din mai multe direcții complementare: web development, marketing digital, producție de articole vestimentare personalizate și proiecte media, toate unite de aceeași idee – creștere prin colaborare.</p>
+            <p>Prin Zenith Ark Web și Marketing, echipa ajută afacerile locale să își construiască o prezență digitală solidă. Prin Zenith Ark Wear și Customs, dezvoltă produse și soluții vestimentare pentru comunități, branduri și organizații. Iar prin proiecte precum „Esența Zilei”, compania își extinde impactul în zona de conținut și conversații autentice.</p>
+            <p>La baza Zenith Ark stau trei valori esențiale: Autenticitate, Profesionalism și Transparență.</p>
+            <p>Misiunea companiei este de a crea un spațiu în care oamenii pot învăța făcând, pot colabora și pot construi ceva real, durabil și asumat.</p>
         </div>
     </div>
 </section>
@@ -247,19 +253,13 @@
 </footer>
 
 <script>
-    function toggleContent() {
-        const content = document.getElementById('expandableContent');
-        content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
-    }
-
-    function toggleAuthor() {
-        const content = document.getElementById('contentAuthor');
-        content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
-    }
-
-    function toggleContentZenith() {
-        const content = document.getElementById('expandableContentZenith');
-        content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+        } else {
+            content.style.display = 'block';
+        }
     }
 </script>
 
