@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esenta Zilei</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Add Font Awesome for social media icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background-color: #2F3136;
+        color: #E8DCC6;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #5A4633;
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #D8A44C;
+    }
+
+    header h1 {
+        color: #E8DCC6;
+        font-size: 28px;
+    }
+
+    nav a {
+        color: #E8DCC6;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #D8A44C;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 120px;
+    }
+
+    .social-icons a {
+        color: #E8DCC6;
+        font-size: 24px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #D8A44C;
+    }
+
+    section {
+        padding: 60px 10%;
+    }
+
+    .hero {
+        background-color: #5A4633;
+        text-align: center;
+        padding: 100px 10%;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #D8A44C;
+    }
+
+    .hero p {
+        max-width: 600px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 25px;
+        background-color: #D8A44C;
+        color: #5A4633;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background-color: #E8DCC6;
+    }
+
+    .content-box {
+        background-color: #5A4633;
+        padding: 40px;
+        border-radius: 12px;
+        margin-top: 30px;
+        border-left: 5px solid #1F5B3A;
+    }
+
+    h3 {
+        color: #D8A44C;
+        margin-bottom: 15px;
+        font-size: 26px;
+    }
+
+    footer {
+        background-color: #5A4633;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        border-top: 3px solid #D8A44C;
+    }
+
+    footer p {
+        font-size: 14px;
+        color: #E8DCC6;
+    }
+
+    /* Add some styling for the expandable content */
+    .expandable-content {
+        display: none;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .expandable-content p {
+        margin-bottom: 10px;
+    }
+
+    @media(max-width: 768px) {
+        header {
+            flex-direction: column;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+        }
+
+        .social-icons {
+            justify-content: center;
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Esenta Zilei</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Despre Esența zilei</a>
+        <a href="#zenith">Despre Zenith Ark</a>
+    </nav>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/esenta_zilei_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.facebook.com/share/1B1h1QmCBH/?mibextid=wwXIfr" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="https://www.tiktok.com/@podcast.arad?is_from_webapp=1&sender_device=pc" target="_blank" class="fab fa-tiktok"></a>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <h2>Bun venit la Esența zilei</h2>
+    <p>Sursa ta zilnică de inspirație, claritate și conversații semnificative. Descoperă esența din spatele fiecărei povești.</p>
+    <a href="#about" class="button">Explore More</a>
+</section>
+
+<section id="about">
+    <div class="content-box">
+        <h3><a href="blog.html" style="color: #E8DCC6; text-decoration: none;">Blog Esența zilei</a></h3>
+        <p>
+        
+        </p>
+        <p>
+
+        </p>
+    </div>
+</section>
+
+<section id="zenith">
+    <div class="content-box" onclick="toggleContent()">
+        <h3>Povestea Esența zilei</h3>
+        <div class="expandable-content" id="expandableContent">
+            <p>„Esența Zilei” este mai mult decât un podcast – este o invitație la o viață trăită conștient, cu sens, echilibru și direcție clară...</p>
+        </div>
+    </div>
+</section>
+
+<section id="zenith">
+    <div class="content-box" onclick="toggleContentZenith()">
+        <h3>Despre Zenith Ark</h3>
+        <div class="expandable-content" id="expandableContentZenith">
+            <p>Zenith Ark este o companie fondată în Timișoara, construită ca o platformă pentru dezvoltare...</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Esența zilei | Powered by Zenith Ark</p>
+</footer>
+
+<script>
+    function toggleContent() {
+        const content = document.getElementById('expandableContent');
+        content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+    }
+
+    function toggleContentZenith() {
+        const content = document.getElementById('expandableContentZenith');
+        content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+    }
+</script>
+
+</body>
+</html>
